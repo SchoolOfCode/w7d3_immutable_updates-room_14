@@ -1,34 +1,34 @@
 import * as fn from "./index.js";
 
 describe("addToEnd", function () {
-  it("should not mutate the original array", function () {
-    const array = ["duck", "duck", "duck"];
-    const actual = fn.addToEnd(array, "GOOSE");
-    expect(array).toEqual(["duck", "duck", "duck"]);
-    expect(actual).not.toBe(array);
-  });
-  it("should add item to the end", function () {
-    const expected = ["duck", "duck", "duck", "GOOSE"];
-    const actual = fn.addToEnd(["duck", "duck", "duck"], "GOOSE");
-    expect(actual).toEqual(expected);
-  });
+	it("should not mutate the original array", function () {
+		const array = ["duck", "duck", "duck"];
+		const actual = fn.addToEnd(array, "GOOSE");
+		expect(array).toEqual(["duck", "duck", "duck"]);
+		expect(actual).not.toBe(array);
+	});
+	it("should add item to the end", function () {
+		const expected = ["duck", "duck", "duck", "GOOSE"];
+		const actual = fn.addToEnd(["duck", "duck", "duck"], "GOOSE");
+		expect(actual).toEqual(expected);
+	});
 });
 
-/* describe("addToBeginning", function () {
-  it("should not mutate the original array", function () {
-    const array = ["meanie", "meinie", "moe"];
-    const actual = fn.addToBeginning(array, "einie");
-    expect(array).toEqual(["meanie", "meinie", "moe"]);
-    expect(actual).not.toBe(array);
-  });
-  it("should add item to the beginning", function () {
-    const expected = ["einie", "meanie", "meinie", "moe"];
-    const actual = fn.addToBeginning(["meanie", "meinie", "moe"], "einie");
-    expect(actual).toEqual(expected);
-  });
+describe("addToBeginning", function () {
+	it("should not mutate the original array", function () {
+		const array = ["meanie", "meinie", "moe"];
+		const actual = fn.addToBeginning(array, "einie");
+		expect(array).toEqual(["meanie", "meinie", "moe"]);
+		expect(actual).not.toBe(array);
+	});
+	it("should add item to the beginning", function () {
+		const expected = ["einie", "meanie", "meinie", "moe"];
+		const actual = fn.addToBeginning(["meanie", "meinie", "moe"], "einie");
+		expect(actual).toEqual(expected);
+	});
 });
 
-describe("insertItem", function () {
+/*describe("insertItem", function () {
   it("should not mutate the original array", function () {
     const array = ["bread", "cheese", "ham", "bread"];
     const actual = fn.insertItem(array, "lettuce", 1);
